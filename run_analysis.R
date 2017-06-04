@@ -105,7 +105,7 @@ names(data_mean_std) <- gsub("Mag", "Magnitude", names(data_mean_std))
 
 aggr.data <- aggregate(data_mean_std[, 2:ncol(data_mean_std)-1],
                        by=list(activity = data_mean_std$activityType,
-                               
+                               Subject = data_mean_std$subId
                                ),
                        mean)
 
